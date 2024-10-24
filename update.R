@@ -1,0 +1,44 @@
+unzip("C:\\Users\\RAHUL\\Downloads\\StudentsPerformance.zip",
+      exdir="C:\\Users\\RAHUL\\Downloads")
+
+
+std<-read.csv("C:\\Users\\RAHUL\\Downloads\\StudentsPerformance.csv")
+View(std)
+
+
+hist(std$reading.score,col="red",breaks=5,
+     main = "Reading vs Writing Score",xlab="Scores")
+hist(std$writing.score,add=TRUE,col="blue")
+legend("topleft", c("reading score", "writing score"), fill=c("red", "Blue"))
+
+
+
+#Scatter
+
+plot(x = std$reading.score, y = std$writing.score,
+     xlab = "Reading Score",
+     ylab = "Writing Score",
+     col=c("red","Blue"),
+     main = "Reading vs Writing Score"
+)
+legend("topleft", c("Reading", "Writing"), fill=c("red", "Blue"))
+
+
+#Box plot
+
+boxplo<-boxplot(std$reading.score~std$gender, data = std,col=c("red","blue"),
+                main = "Reading Score By Gender",
+                xlab = "Gender",
+                ylab = "Reading Score")
+boxplo
+
+
+library(tidyverse)
+str(std)
+dim(std)
+glimpse(std)
+summary(std)
+head(std)
+tail(std)
+
+
