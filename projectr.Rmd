@@ -8,7 +8,7 @@ View(std)
 
 
 hist(std$reading.score,col="red",breaks=5,
-	main = "Reading vs Writing Score",xlab="Scores")
+main = "Reading vs Writing Score",xlab="Scores")
 hist(std$writing.score,add=TRUE,col="blue")
 legend("topleft", c("reading score", "writing score"), fill=c("red", "Blue"))
 
